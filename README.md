@@ -1,12 +1,11 @@
 # demo-materialize 
-git clone https://github.com/johntom/demo-materialize.git
-cd demo-materialize
-npm install
-npm install jspm
-.\node_modules\.bin\jspm install
-gulp watch
-or
-gulp serve (with bundle)
+1. git clone https://github.com/johntom/demo-materialize.git
+2. cd demo-materialize
+3. npm install
+4. npm install jspm
+5. .\node_modules\.bin\jspm install
+6. gulp watch
+7. or gulp serve (with bundle)
 
 
 

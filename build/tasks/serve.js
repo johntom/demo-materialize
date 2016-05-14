@@ -8,7 +8,9 @@ gulp.task('serve', function(done) {
   browserSync({
     online: false,
     open: false,
-    port: 9000,
+      host: 'www.gtz.com:9040', //74.114.164.18',
+    // // ui:false,
+     port: 9040,
     server: {
       baseDir: ['.'],
       middleware: function(req, res, next) {

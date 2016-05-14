@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col s12">
         <ul md-tabs>
-          <li><a class="active" href="#about">What is Aurelia Materialize bridge?</a></li>
+          <li><a class="active" href="#todo">trails backend todo  example</a></li>
+          <li><a  href="#about">What is Aurelia Materialize bridge?</a></li>
           <li><a href="#example">List - example of an Aurelia component</a></li>
         </ul>
       </div>
@@ -48,7 +49,7 @@
             <md-collection view-model.ref="list">
               <md-collection-item repeat.for="actor of actors" class="avatar ${ selector.isSelected ? 'selected' : '' }">
                 <md-collection-selector view-model.ref="selector" item.bind="actor" md-on-selection-changed.delegate="onSelectionChanged($event)">
-                  <img src="images/collections-sample-1.jpg" alt="" class="circle md-collection-selector__hover">
+                  <img src="images/${actor.name}.jpg" alt="" class="circle md-collection-selector__hover">
                 </md-collection-selector>
                 <span class="accent-text title">${actor.name}</span>
                 <p style="max-width: 80%;">${actor.description}</p>
@@ -68,5 +69,36 @@
       </div>
     </div>
     </section>
+    
+    <section id="todo">
+      <div class="row">
+        <div class="col s12">
+          <div style="margin:auto;text-align:center">
+            <h1 class="text-lg">Aurelia Materialize <i>Trails</i></h1>
+            <h3>Tails backend - enhanced by Aurelia</h3>
+              <h3>Passport encryption with JWT</h3>
+            <span>Version ${version}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col s12 m4">
+             <img src="images/trails.png">
+        </div>
+       
+      </div>
+      <div class="row">
+        <div class="col s12 center" style="padding-top: 20px; padding-bottom:20px">
+          <ul class="features">
+            <li><h4>Express or Hapi Servers</h4></li>
+            <li>ORM data featuring Mongodb in this  <i style="text-decoration:underline">demo</i></li>
+            <li>Login with username=<i style="text-decoration:underline">john </i> or <i style="text-decoration:underline">jaumard</i> password=<i style="text-decoration:underline">adminadmin</i></li> 
+       
+          </ul>
+        </div>
+      </div>
+    </section>
+  
   </section>
 </template>

@@ -14,6 +14,13 @@
       <li md-waves route-highlight="routes: about">
         <a route-href="route: about">About</a>
       </li>
+      <li md-waves route-highlight="routes: login">
+        <a route-href="route: login">login</a>
+      </li>
+                 
+      <li md-waves route-highlight="routes: todo">
+        <a route-href="route: todo"   show.bind="isAuthenticated">Todo</a>
+      </li>
 
       <li md-waves route-highlight="routes: installation">
         <a route-href="route: installation">Installation</a>
@@ -23,9 +30,7 @@
         <a route-href="route: project-status">Project Status</a>
       </li>
 
-<!--   <li route-highlight="routes: theme">
-        <a route-href="route: theme">Theme</a>
-      </li> -->
+
 
       <li md-waves route-highlight="routes: help">
         <a route-href="route: docs; params.bind: { category: 'about_this_application', file: '1._introduction' };">Help/Docs</a>
@@ -52,3 +57,8 @@
     </md-sidenav>
   </md-navbar>
 </template>
+
+<!--<li repeat.for="route of router.navigation | authFilter: isAuthenticated" class="${route.isActive ? 'active' : ''}">-->
+<!--   <li route-highlight="routes: theme">
+        <a route-href="route: theme">Theme</a>
+      </li> -->

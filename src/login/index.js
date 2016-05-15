@@ -99,9 +99,9 @@ export class Login {
 
                 } else {
                     
-                         this.authgtz.token = jsonRes.data.token;
-                this.authgtz.user = jsonRes.data.user.username;
-                this.authgtz.loginuserid = jsonRes.data.user.id;
+                this.authgtz.token = jsonRes.token;
+                this.authgtz.user = jsonRes.user.username;
+                this.authgtz.loginuserid = jsonRes.user.id;
                // if (jsonRes.data.token.length > 10) {
                     this.authgtz.isAuthenticated = true;
                     this.theRouter.navigate("todo/index");

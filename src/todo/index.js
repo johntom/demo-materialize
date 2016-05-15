@@ -81,7 +81,6 @@ export class Todos {
        // alert(rec.title)
       });
      
-     
   }
   
     get markAllCompleted() {
@@ -134,14 +133,15 @@ export class Todos {
         let user = this.authgtz.user;
         let userid = 11832;//this.authgtz.loginuserid;
              
-        api.getTodostoken(userid, token)
+      //  api.getTodostoken(userid, token)
+        api.getTodostokenTrails(userid, token)
             .then((jsonRes) => {
 
-                this.items = jsonRes.data;
-                console.log('Fetched Todos ' + jsonRes.data);
+                this.items = jsonRes;// .data;
+                console.log('Fetched Todos ' + jsonRes);//a.data);
                // logger.info('Fetched Todos ' + (this.includeArchived ? 'including archived' : 'excluding archived'));
-            },
-                error => logger.error(error.message, "Query failed"));
+            })
+            //,   error => logger.error(error.message, "Query failed"));
     }
 
     addItem() {

@@ -48,7 +48,8 @@ export var   api = {
         token.password = pass;
        
        
-       var url = 'http://www.gtz.com:9050/auth/local';
+     //  var url = 'http://www.gtz.com:9050/auth/local';
+       var url = 'http://localhost:3000/auth/local';
       
         return fetch(url, {
             method: 'post',
@@ -65,16 +66,22 @@ export var   api = {
          
     },
 
-      getTodostokeTrails(userid,token) {
+      getTodostokenTrails(userid,token) {
       
-    var url = `http://www.gtz.com:9012/api/todo/getclient/${userid}`;
+  //  var url = `http://www.gtz.com:9012/api/todo/getclient/${userid}`;
+ //s   var url = `http://localhost:3000/api/todo/getclient/${userid}`;
+var url = `http://localhost:3000/api/v1/todo`;
+
+
      return fetch(url, {
              mode: 'cors',
             method: 'get',
             headers: {
               
-                'Content-Type': 'application/json',
-                'Authorization': 'JWT ' + token
+               // 'Content-Type'
+                
+                'Authorization': 'JWT ' + token,
+                'Accept': 'application/json',
             }
          }).then((res) => res.json());
     },
